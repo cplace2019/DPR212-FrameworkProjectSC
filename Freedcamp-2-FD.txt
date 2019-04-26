@@ -1,0 +1,30 @@
+FREEDCAMP FOR FRAMEWORK PROJECT PROGRESS TRACKING
+
+I continued to utilize Freedcamp to create tasks for the work that needed to be completed for my Framework Project. 
+
+FRAMEWORK PROJECT PROGRESS
+
+2-FD - FRAMEWORK DEV (PHASE2)
+Fix
+-primaryStage.setResizable(false) to prevent screen resizing issues.
+-reduced scene size to remove extra space between scene and grid
+-added more error checking code which resets variables and controls values and show error messages in the labels to inform users
+Imp
+-added images to operator buttons: 1-added imports for image and image viewer libraries; 2-add the image files to the calculatorfx package folder; 3-create image object with ref to the image file for reset and operator buttons; 4-update button declarations with new imageview() pass in the button image name
+-setMaxSize for digit and operator buttons
+-declared one label and four string variables to show user operations; added grid statement for the label and  updated event code to reflect changes
+-removed four individual labels prevously used to show user operations; removed grid statements for labels and updated event code to reflect changes  
+-created a calculate method; added the calculate method call and removed the if-else block previously used to do the calculation for event code
+-setStyle for grid, buttons, labels and textfield using inline setStyle statements
+Compile
+-compiled, debugged and fix errors
+Run
+ -run, test entries and fix problems
+Github
+-deleted previous version of source code: v1
+-uploaded new version source code: v2
+-uploaded image files to Github
+-updated Github CalculatorFX readme file with instructions for image files
+
+
+-Carmen
