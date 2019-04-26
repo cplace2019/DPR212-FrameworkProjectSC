@@ -1,6 +1,6 @@
 # DPR212-FrameworkProjectSC
 
-FrameworkProjectSC is a recap of my Framework Projectfor my CalculatorFX application development work utilizing the JavaFX Framework v8.
+FrameworkProjectSC is a recap of my Framework Project for my CalculatorFX application development work which utilizes the JavaFX 8 Framework.
 
 FrameworkProjectSC contains branches for the various phases of my development work.
 
