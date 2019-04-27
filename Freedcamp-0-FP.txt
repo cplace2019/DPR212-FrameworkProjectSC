@@ -1,0 +1,19 @@
+Freedcamp for Framework Project Progress Tracking
+
+Freedcamp has Kanban board and others Project Management resources to track project progress.
+
+I signed up and utilized Freedcamp to create tasks for  the work that needed to be completed for my Framework Project. 
+
+Framework Project Progress
+ 
+0-FP - Framework (Proposal)
+Research
+ - Java Graphical User interfaces
+Pick
+ - JavaFX for my Framework
+Proposal
+- JavaFX Calculator
+- posted in canvas assignment
+
+
+-Carmen
