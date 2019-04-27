@@ -1,0 +1,20 @@
+FREEDCAMP FOR FRAMEWORK PROJECT PROGRESS TRACKING
+
+I continued to utilize Freedcamp to create tasks for the work that needed to be completed for my Framework Project. 
+
+FRAMEWORK PROJECT PROGRESS
+
+4-FD - FRAMEWORK DEV (PHASE4)
+
+If I was to continue working on the CalculatorFX program in the future, I would like to...
+
+-Implement styles using css instead of using inline setStyle statements
+-Implement menues for setting ptoperties such a themes or background, font and color
+-Implement additional calculation and operators and conversion operations
+-Implement OOP methodologies to better work with Java and JavaFX classes, inheritance and interfaces working Models and Views
+-Implement data feature to support graphing, charting and statistical calculations and pivot tables
+-Implement web base features using FXML, html, css and  javaxcript
+-Implement animation (2D and 3D) and visual effects based on calculation like saw and did using my TI advanced graphical calculators;  and advanced calculation model and 3D printing
+-Implement games (fun and enjoyment while learning is good!)
+
+-Carmen
