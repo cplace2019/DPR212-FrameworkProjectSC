@@ -25,3 +25,4 @@ FrameworkProjectSC is a recap of my Framework Project for my CalculatorFX applic
 4FD: FRAMEWORK PROPOSAL PHASE
 - See the readme-4-FD.txt file for details about this phase.
 
+
