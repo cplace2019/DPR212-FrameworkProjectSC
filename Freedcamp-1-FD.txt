@@ -1,0 +1,29 @@
+FREEDCAMP FOR FRAMEWORK PROJECT PROGRESS TRACKING
+
+I continued to utilize Freedcamp to create tasks for the work that needed to be completed for my Framework Project. 
+
+FRAMEWORK PROJECT PROGRESS
+
+1-FD - FRAMEWORK DEV (PHASE1)
+fix
+-Determined the problems I'm experience with JavaFX and the NetBean IDE.
+-Discovered that NetBean IDE needs to be updated
+-Updated the NetBean IDE which fixed the JavaFX Framework
+Imp
+-update the CalculatorFX code
+-remove work around code
+-add features removed due to the problem
+-add additional features newly learned: added import for effect library; declared InnerShadow variables and setEffect for buttons
+-fix any other issues outstanding 
+Compile
+-compile and fix any errors or note issues for research later.
+Run
+ -run CalculatorFX app, test digit buttons and operation buttons to see if working correctly.
+-Note issues to be researched at a later time.
+Github
+-post CalculatorFX source code for version 1 to Github and update the readme file.
+Submit
+-Submit CalculatorFX source code in canvas for my Framework project assignment 
+
+
+-Carmen
