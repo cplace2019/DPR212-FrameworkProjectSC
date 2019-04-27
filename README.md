@@ -1,8 +1,3 @@
-# DPR212-FrameworkProjectSC
+# 2FD: FRAMEWORK DEVELOPMENT PHASE
 
-FrameworkProjectSC is a recap of my Framework Project for my CalculatorFX application development work which utilizes the JavaFX 8 Framework.
-
-FrameworkProjectSC contains branches for the various phases of my development work.
-
-
--Carmen Renwick
+See the readme-2-FD.txt file for details about this phase.
