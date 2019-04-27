@@ -1,6 +1,6 @@
 /**
 Carmen Renwick, DPR212(Dsa), CalculatorFXv3
-The CalculatorFX program allows users to perform basic calculation functions such as addition, substration, multiplication and division.  It provides: digit buttons,  operation buttons, a clear button and a display to show results. 
+The CalculatorFX program allows users to perform basic calculation functions such as addition, substration, multiplication and division.  It provides: digit buttons,  operation buttons, a reset button, a display box, a progress box. and a status box. 
  */
 
 package calculatorfx;
