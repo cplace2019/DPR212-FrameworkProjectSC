@@ -8,5 +8,3 @@ Contributions: CalculatorFXv0, CalculatorFXv1, CalculatorFXv2, CalculatorFXv3/
 
 package calculatorfx;
 
-
-

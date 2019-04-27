@@ -1,4 +1,5 @@
 
+
 FrameworkProjectSC is a recap of my Framework Project for my CalculatorFX application development work which utilizes the JavaFX 8 Framework.
 
 
@@ -23,3 +24,4 @@ FrameworkProjectSC is a recap of my Framework Project for my CalculatorFX applic
 
 4FD: FRAMEWORK PROPOSAL PHASE
 - See the readme-4-FD.txt file for details about this phase.
+
