@@ -10,18 +10,18 @@ FrameworkProjectSC is a recap of my Framework Project for my CalculatorFX applic
 0FP: FRAMEWORK PROPOSAL PHASE
 - See the readme-0-FP.txt file for details about this phase.
 
-0FD: FRAMEWORK PROPOSAL PHASE
+0FD: FRAMEWORK DEVELOPMENT PHASE
 - See the readme-0-FD.txt file for details about this phase.
 
-1FD: FRAMEWORSAL PHASE
+1FD: FRAMEWORK DEVELOPMENT PHASE
 - See the readme-1-FD.txt file for details about this phase.
 
-2FD: FRAMEWORK PROPOSAL PHASE
+2FD: FRAMEWORK DEVELOPMENT PHASE
 - See the readme-2-FD.txt file for details about this phase.
 
-3FD: FRAMEWORK PROPOSAL PHASE
+3FD: FRAMEWORK DEVELOPMENT PHASE
 - See the readme-3-FD.txt file for details about this phase.
 
-4FD: FRAMEWORK PROPOSAL PHASE
+4FD: FRAMEWORK DEVELOPMENT PHASE
 - See the readme-4-FD.txt file for details about this phase.
 
