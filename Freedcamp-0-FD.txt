@@ -1,0 +1,39 @@
+FREEDCAMP FOR FRAMEWORK PROJECT PROGRESS TRACKING
+
+I continued to utilize Freedcamp to create tasks for the work that needed to be completed for my Framework Project. 
+
+FRAMEWORK PROJECT PROGRESS
+ 
+0-FD - FRAMEWORK DEV (INITIAL)
+Learn
+-How to get started with JavaFX
+-Found JavaFX Doc: JFXST.pdf release 8, E50606-02, August 2014.
+-Use JFXST.pdf to learn how to get started with JavaFX
+Needs
+ - Based on JFXST.pdf the needs are: Java SDk 8, Netbean IDE (a version which supports JavaFX) and the JavaFX samples (need to be downloaded from Oracles website)
+-JFXST.pdf - understand it, to get started with JavaFX
+-Java SDk 8 - already installed
+-Netbean IDE - version 8.2 installed already.  
+-JavaFX samples - downloaded
+-work through only the samples needed to start developing my calculator app,  will return to additional samples later.
+-review existing calculator app model from our textbook - ch11sec01_we01calc
+Design 
+-Work through what's needed for my CalculatorFX app such as textfield, digit buttons, operation buttons, label, grid layout and the GUI based on my proposal
+Code
+-start coding the CalculatorFX GUI
+-Next start coding in the button events and calculations needed
+Project
+-create the CalculatorFX project in NetBean from existing source code - see the GitHub readme CalculatorFX
+Compile
+ -compile the CalculatorFX source code
+-work through the issues - I'm getting many warnings from the IDE for code that should work based on the JavaFX getting started document.  I tried reworking the code, recreating the project and many other things to compile the source code until something works.  
+-Note issues to be researched at a later time.
+Run
+ -run CalculatorFX app, test digit buttons and operation buttons to see if working correctly.
+-Note issues to be researched at a later time.
+Github 
+- No posting at this time.  I need to detemine the source of the problems I'm experience with  JavaFX and the NetBean IDE.
+Submit
+-Submit CalculatorFX source code in canvas for my Framework project assignment for now   I need to determine why the JavaFX framework is not working as it should in the NetBean IDE.
+
+-Carmen
