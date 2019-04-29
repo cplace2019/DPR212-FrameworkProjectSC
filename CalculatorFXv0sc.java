@@ -1,14 +1,11 @@
 /**
-Carmen Renwick, DPR212(Dsa)
-CalculatorFXv0
-The CalculatorFX program allows users to perform basic calculation functions such as addition, substration, multiplication and division.  It provides: digit buttons,  operation buttons, a clear button and a display to show results.  
+Carmen Renwick, DPR212(Dsa), Week08, CalculatorFXv1
+The CalculatorFX program allows users to perform basic calculation functions such as addition, substration, multiplication and division.  It provides: digit buttons,  operation buttons, a clear button and a display to show results.
  */
-
 package calculatorfx;
 
-import java.util.*;
 import java.lang.*;
-//import java.lang.String;
+import java.lang.String;
 import javafx.application.*;
 import javafx.stage.*;
 import javafx.scene.*;
@@ -22,7 +19,7 @@ public class CalculatorFX extends Application {
 	@Override 
 	public void start(Stage primaryStage) { 
 
-        primaryStage.setTitle("CalculatorFXv0");
+        primaryStage.setTitle("CalculatorFXv1");
         
         GridPane grid = new GridPane(); 
         grid.setAlignment(Pos.CENTER);
@@ -30,12 +27,12 @@ public class CalculatorFX extends Application {
         grid.setVgap(10);
         grid.setPadding(new Insets(10, 10, 10, 10));
 
-        TextField display = new TextField("");
-        TextField value1 = new TextField("");
-        TextField value2 = new TextField("");
-        TextField opSelNotEq = new TextField("");
-        TextField opSelEq = new TextField("");
-        TextField msg = new TextField("");
+        TextField displaytf = new TextField("0");
+        TextField value1tf = new TextField("0");
+        TextField value2tf = new TextField("0");
+        TextField optf = new TextField("+");
+        TextField eqtf = new TextField("?");
+        Label msglb = new Label("Welcome!");
         
         Button btnDivideOp = new Button("/");
         Button btnMultiplyOp = new Button("*");
@@ -52,10 +49,10 @@ public class CalculatorFX extends Application {
         Button btnDigit1 = new Button("1");
         Button btnDigit0 = new Button("0");
         Button btnPeriod = new Button(".");
-        Button btnEqualOp = new Button("=");
-        Button btnClear = new Button("Clear");
+        Button btnEqual = new Button("=");
+        Button btnReset = new Button("Reset");
         
-        grid.add(display, 0, 0, 4, 1);
+        grid.add(displaytf, 0, 0, 4, 1);
         grid.add(btnDigit7, 0, 1);
         grid.add(btnDigit8, 1, 1);
         grid.add(btnDigit9, 2, 1);
@@ -70,226 +67,305 @@ public class CalculatorFX extends Application {
         grid.add(btnSubtractOp, 3, 3);
         grid.add(btnDigit0, 0, 4);
         grid.add(btnPeriod, 1, 4);
-        grid.add(btnEqualOp, 2, 4);
+        grid.add(btnEqual, 2, 4);
         grid.add(btnAddOp, 3, 4);
-        grid.add(btnClear, 0, 5, 4, 1);
-        grid.add(value1, 0, 6, 3, 1);
-        grid.add(opSelNotEq, 3, 6, 1, 1);
-        grid.add(value2, 0, 7, 3, 1);
-        grid.add(opSelEq, 3, 7, 1, 1);
-        grid.add(msg, 0, 8, 4, 1);
+        grid.add(btnReset, 0, 5, 4, 1);
+        grid.add(value1tf, 0, 6, 3, 1);
+        grid.add(optf, 3, 6, 1, 1);
+        grid.add(value2tf, 0, 7, 3, 1);
+        grid.add(eqtf, 3, 7, 1, 1);
+        grid.add(msglb, 0, 8, 4, 1);
         
-        display.setPrefWidth(150);   
-        btnClear.setPrefWidth(150);
-        value1.setPrefWidth(120);
-        value2.setPrefWidth(120);
-        opSelNotEq.setPrefWidth(30);
-        opSelEq.setPrefWidth(30);
-        msg.setPrefWidth(150);
+        displaytf.setPrefWidth(150);   
+        btnReset.setPrefWidth(150);
+        value1tf.setPrefWidth(120);
+        value2tf.setPrefWidth(120);
+        optf.setPrefWidth(30);
+        eqtf.setPrefWidth(30);
+        msglb.setPrefWidth(150);
         
-        display.setEditable(false); 
-        value1.setEditable(false); 
-        value2.setEditable(false); 
-        opSelNotEq.setEditable(false); 
-        opSelEq.setEditable(false); 
-        msg.setEditable(false);
-        
-        //Create EventHandler 
-        EventHandler<ActionEvent> handler = new EventHandler<ActionEvent>() {
+        displaytf.setEditable(false); 
+        value1tf.setEditable(false); 
+        value2tf.setEditable(false); 
+        optf.setEditable(false); 
+        eqtf.setEditable(false); 
+  
 
+        //Create digit button EventHandler 
+        EventHandler<ActionEvent> digitbtnhandler = new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent ae) {
+
+		String displaystr = displaytf.getText();
+                String digit = "0";
+               
+                if(ae.getSource()==btnDigit0)
+                { 
+                    digit = "0";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else 
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit1)
+                { 
+                    digit = "1";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit2)
+                { 
+                    digit = "2";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit3)
+                { 
+                    digit = "3";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit4)
+                { 
+                    digit = "4";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit5)
+                { 
+                    digit = "5";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit6)
+                { 
+                    digit = "6";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit7)
+                { 
+                    digit = "7";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit8)
+                { 
+                    digit = "8";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+                else if(ae.getSource()==btnDigit9)
+                { 
+                    digit = "9";
+                    if(displaystr.equals("0"))
+                    {
+                        displaytf.setText(digit);
+                    }
+                    else
+                    {
+                        displaytf.setText(displaystr + digit);
+                    } 
+                }
+                else if(ae.getSource()==btnPeriod)
+                { 
+                    digit = ".";
+                    if(displaystr.indexOf('.') == -1)
+                    { 
+                        displaytf.setText(displaystr + digit);
+                    }
+                }
+            }
+        };
+        
+        //Add digit button handler to button 
+        btnDigit0.setOnAction(digitbtnhandler);  
+        btnDigit1.setOnAction(digitbtnhandler);  
+        btnDigit2.setOnAction(digitbtnhandler);  
+        btnDigit3.setOnAction(digitbtnhandler);  
+        btnDigit4.setOnAction(digitbtnhandler);  
+        btnDigit5.setOnAction(digitbtnhandler);  
+        btnDigit6.setOnAction(digitbtnhandler);  
+        btnDigit7.setOnAction(digitbtnhandler);  
+        btnDigit8.setOnAction(digitbtnhandler);  
+        btnDigit9.setOnAction(digitbtnhandler);  
+        btnPeriod.setOnAction(digitbtnhandler); 
+
+
+		//Create op button EventHandler 
+        EventHandler<ActionEvent> opbtnhandler = new EventHandler<ActionEvent>() {
+
+            @Override
+            public void handle(ActionEvent ae) {
+
+                String lastOp = "+";
+                String displaystr = displaytf.getText();
+
+                if(ae.getSource()==btnAddOp)
+                { 
+                    lastOp = "+"; 
+                }
+                else if(ae.getSource()==btnSubtractOp)
+                { 
+                    lastOp = "-"; 
+                }
+                else if(ae.getSource()==btnMultiplyOp)
+                { 
+                    lastOp = "*"; 
+                }
+                else if(ae.getSource()==btnDivideOp)
+                { 
+                    lastOp = "/"; 
+                }
+                
+                value1tf.setText(displaystr);
+                displaytf.setText("0");
+                optf.setText(lastOp);
+
+            }
+        };
+   
+        //Add op button handler to button 
+        btnAddOp.setOnAction(opbtnhandler);
+        btnSubtractOp.setOnAction(opbtnhandler);  
+        btnMultiplyOp.setOnAction(opbtnhandler);  
+        btnDivideOp.setOnAction(opbtnhandler);  
+        
+
+        //Create equal button EventHandler 
+        EventHandler<ActionEvent> eqbtnhandler = new EventHandler<ActionEvent>() {
+            
             @Override
             public void handle(ActionEvent ae) {
 
                 double val1 = 0;
                 double val2 = 0;
-                double lastValue = 0;
-                String lastOp = "+";
-                String op = "+";
-                String btnGrp = "clBtn";
-                String digit = "0";
+                double lastVal = 0;
+                String eq = "="; 
+                String opStr = optf.getText(); 
+                String displayStr = displaytf.getText();  
+
+                value2tf.setText(displayStr);
+                displaytf.setText("0");
+                eqtf.setText(eq);
                
-                if(ae.getSource()==btnDigit0)
-                { 
-                        digit = "0"; 
-                        btnGrp  = "dgBtn";
+                val1 = Double.parseDouble(value1tf.getText()); 
+                val2 = Double.parseDouble(value2tf.getText()); 
+            
+                if (opStr.equals("+")) 
+                {
+                    lastVal = val1 + val2;
+                    displaytf.setText("" + lastVal);
+                }           
+                else if (opStr.equals("-")) 
+                {
+                    lastVal = val1 - val2;
+                    displaytf.setText("" + lastVal);
                 }
-                else if(ae.getSource()==btnDigit1)
-                { 
-                        digit = "1";
-                        btnGrp  = "dgBtn";
+                else if (opStr.equals("*")) 
+                {
+                    lastVal = val1 * val2;
+                    displaytf.setText("" + lastVal);
                 }
-                else if(ae.getSource()==btnDigit2)
-                { 
-                        digit = "2";
-                        btnGrp  = "dgBtn";
+                else if (opStr.equals("-")) 
+                {
+                    lastVal = val1 - val2;
+                    displaytf.setText("" + lastVal);
                 }
-                else if(ae.getSource()==btnDigit3)
-                { 
-                        digit = "3";
-                        btnGrp  = "dgBtn";
+                else if (opStr.equals("*")) 
+                {
+                    lastVal = val1 * val2;
+                    displaytf.setText("" + lastVal);
                 }
-                else if(ae.getSource()==btnDigit4)
-                { 
-                        digit = "4";
-                        btnGrp  = "dgBtn";
+                else if (opStr.equals("/")) 
+                {
+                    if (val2 == 0) 
+                    {
+                        lastVal = val1;
+                        displaytf.setText("" + lastVal);
+                        msglb.setText("Dividing by 0!");
+                    }
+                    lastVal = val1 / val2;
+                    displaytf.setText("" + lastVal);
                 }
-                else if(ae.getSource()==btnDigit5)
-                { 
-                        digit = "5";
-                        btnGrp  = "dgBtn";
-                }
-                else if(ae.getSource()==btnDigit6)
-                { 
-                        digit = "6";
-                        btnGrp  = "dgBtn";
-                }
-                else if(ae.getSource()==btnDigit7)
-                { 
-                        digit = "7";
-                        btnGrp  = "dgBtn";
-                }
-                else if(ae.getSource()==btnDigit8)
-                { 
-                        digit = "8";
-                        btnGrp  = "dgBtn";
-                }
-                else if(ae.getSource()==btnDigit9)
-                { 
-                        digit = "9";
-                        btnGrp  = "dgBtn";
-                }
-                else if(ae.getSource()==btnPeriod)
-                { 
-                        digit = ".";
-                        btnGrp  = "dgBtn";
-                }
-                else if(ae.getSource()==btnAddOp)
-                { 
-                        lastOp = "+"; 
-                        btnGrp  = "opBtn";
-                }
-                else if(ae.getSource()==btnSubtractOp)
-                { 
-                        lastOp = "-"; 
-                        btnGrp  = "opBtn";
-                }
-                else if(ae.getSource()==btnMultiplyOp)
-                { 
-                        lastOp = "*"; 
-                        btnGrp  = "opBtn";
-                }
-                else if(ae.getSource()==btnDivideOp)
-                { 
-                        lastOp = "/"; 
-                        btnGrp  = "opBtn";
-                }
-                else if(ae.getSource()==btnEqualOp)
-                { 
-                        lastOp = "="; 
-                        btnGrp  = "opBtn";
-                }
-                else if(ae.getSource()==btnClear)
-                { 
-                        btnGrp  = "clBtn";
-                }
+            }
+        };   
+
+        //Add equal button handler to button 
+        btnEqual.setOnAction(eqbtnhandler); 
+
+
+        //Create reset button EventHandler 
+        EventHandler<ActionEvent> resetbtnhandler = new EventHandler<ActionEvent>() {
+            
+            @Override
+            public void handle(ActionEvent ae) {
+
+                displaytf.setText("0");
+                value1tf.setText("0");
+                value2tf.setText("0");
+                optf.setText("+");
+                eqtf.setText("?");
+                msglb.setText("Welcome!");
                 
-
-                if(btnGrp  == "dgBtn")
-                {
-                   display.setText(display.getText() + digit);
-                }
-                else if (btnGrp  == "opBtn")
-                {
-                    
-                    if (display.getText() != "" && lastOp != "=")
-                    {  
-                        value1.setText(display.getText());
-                        opSelNotEq.setText(lastOp); 
-                        display.setText("");
-                    }
-                    else if (display.getText() != "" && lastOp == "=")
-                    {  
-                        value2.setText(display.getText());
-                        opSelEq.setText(lastOp);
-                        display.setText("");
-                        
-                        if (value2.getText() == "" || value2.getText() == "" || opSelNotEq.getText() == "")
-                        {
-                            msg.setText("ERROR: Missing Information!");
-                            
-                        }
-                        else if (value1.getText() != "" && value2.getText() != "" && opSelNotEq.getText() != "" )
-                        {
-                            op = opSelNotEq.getText();
-                            val1 = Double.parseDouble(value1.getText()); 
-                            val2 = Double.parseDouble(value2.getText()); 
-                        
-                            if (op.equals("+")) 
-                            {
-                                lastValue = val1 + val2;
-                                display.setText("" + lastValue);
-                            }
-                            else if (op.equals("-")) 
-                            {
-                                lastValue = val1 - val2;
-                                display.setText("" + lastValue);
-                            }
-                            else if (op.equals("*")) 
-                            {
-                                lastValue = val1 * val2;
-                                display.setText("" + lastValue);
-                            }
-                            else if (op.equals("/")) 
-                            {
-                                 if (val2 == 0) 
-                                {
-                                    lastValue = val1;
-                                    display.setText("" + lastValue);
-                                }
-                                lastValue = val1 / val2;
-                                display.setText("" + lastValue);
-                            }
-                        }
-                        
-                    }
-                    
-                }
-                else if(btnGrp  == "clBtn" )
-                { 
-                    val1= 0;
-                    val2= 0;
-                    lastValue = 0;
-                    lastOp = "+";
-                    op = "+";
-                    digit = "0";
-                    display.setText("");
-                    value1.setText("");
-                    value2.setText("");
-                    opSelNotEq.setText("");
-                    opSelEq.setText("");
-
-                }
-            }   
+            }
         };
-        
-        //Add handler to button 
-        btnDigit0.setOnAction(handler);  
-        btnDigit1.setOnAction(handler);  
-        btnDigit2.setOnAction(handler);  
-        btnDigit3.setOnAction(handler);  
-        btnDigit4.setOnAction(handler);  
-        btnDigit5.setOnAction(handler);  
-        btnDigit6.setOnAction(handler);  
-        btnDigit7.setOnAction(handler);  
-        btnDigit8.setOnAction(handler);  
-        btnDigit9.setOnAction(handler);  
-        btnPeriod.setOnAction(handler); 
-        btnAddOp.setOnAction(handler);
-        btnSubtractOp.setOnAction(handler);  
-        btnMultiplyOp.setOnAction(handler);  
-        btnDivideOp.setOnAction(handler);  
-        btnEqualOp.setOnAction(handler);  
-        btnClear.setOnAction(handler); 
+
+        //Add reset button handler to button 
+        btnReset.setOnAction(resetbtnhandler); 
 
         Scene scene = new Scene(grid, 250, 400);
 
@@ -300,7 +376,7 @@ public class CalculatorFX extends Application {
     }
 
     /**
-     * @param args the command line arguments
+     @param args the command line arguments
      */
     public static void main(String[] args) {
         launch(args);
