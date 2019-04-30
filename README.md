@@ -5,7 +5,12 @@ FrameworkProjectSC is a recap of my Framework Project for my CalculatorFX applic
 
 -Carmen Renwick
 
+CURRENT: FRAMEWORK PROJECT
+Is located in my DPR212-FrameworkProject repository.
 
+The following file are related to the current CalculatorFX version: 
+CalculatorFX.PNG, CalculatorFX.java,  Readme.txt, The image files. 
+The getting started with JavaFX zip file contains the JFXST.pdf file.
 
 0FP: FRAMEWORK PROPOSAL PHASE
 - See the readme-0-FP.txt file for details about this phase.
